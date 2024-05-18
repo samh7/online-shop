@@ -1,14 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
-
-
-.ibm-plex-mono-regular {
-  font-family: "IBM Plex Mono", monospace;
-  font-weight: 400;
-  font-style: normal;
+* {
+  padding: 0;
+  margin: 0;
 }
 
 .protest-riot-regular {
@@ -17,19 +11,10 @@
   font-style: normal;
 }
 
-* {
-  padding: 0;
-  margin: 0;
+@font-face {
+  font-family: "dotzero";
+  src: url("./DotZero.ttf");
 }
-
-.ubuntu-regular {
-  font-family: "Ubuntu", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-/* background-color: #0f0f0f; */
-/* background-color: #f0f0f0; */
 
 .header {
   display: flex;
@@ -41,10 +26,6 @@
   align-items: center;
   justify-content: center;
   z-index: 10000;
-
-  @media (max-width: 600px) {
-    background-color: green;
-  }
 }
 
 .header-left,
@@ -62,7 +43,6 @@
   }
 
 }
-
 
 
 .header-left {
@@ -91,7 +71,7 @@
   }
 }
 
-.hamburger-menu-container{
+.hamburger-menu-container {
   justify-content: right;
 }
 
@@ -104,7 +84,6 @@
   width: 60px;
   height: 45px;
   position: relative;
-  /* margin: 50px auto; */
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
@@ -127,7 +106,7 @@
   position: absolute;
   height: 9px;
   width: 100%;
-  background: #0f0f0f ;
+  background: #0f0f0f;
   border-radius: 9px;
   opacity: 1;
   left: 0;
@@ -228,16 +207,9 @@
   color: #f0f0f0;
 }
 
-@font-face {
-  font-family: "dotzero";
-  src: url("./DotZero.ttf");
-}
-
 
 
 .home-img {
-
-
   object-fit: cover;
   object-position: center top;
   width: 100%;
