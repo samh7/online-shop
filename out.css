@@ -753,7 +753,7 @@ body {
 @font-face {
   font-family: "dotzero";
 
-  src: url("../fonts/DotZero.ttf");
+  src: url("./DotZero.ttf");
 }
 
 .hamburger-screen {
