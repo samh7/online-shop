@@ -967,7 +967,7 @@ body {
   width: 190px;
   aspect-ratio: 4/5;
   @media (max-width: 670px) {
-    width: 180px;
+    width: 170px;
   }
 }
 
