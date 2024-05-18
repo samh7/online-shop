@@ -61,7 +61,7 @@ body {
   position: fixed;
   top: 0;
   width: 100vw;
-  background-color: rgba(240, 240, 240, 0.6);
+  background-color: rgba(15, 15, 15, 0.9);
   height: 80px;
   align-items: center;
   justify-content: center;
@@ -75,7 +75,7 @@ body {
   padding: 0 35px 0 35px;
   width: 33%;
   display: flex;
-  color: #0f0f0f;
+  color: #f0f0f0;
   font-size: 26px;
 
   @media (max-width: 600px) {
@@ -149,7 +149,7 @@ body {
   position: absolute;
   height: 9px;
   width: 100%;
-  background: #0f0f0f;
+  background: #f0f0f0;
   border-radius: 9px;
   opacity: 1;
   left: 0;
