@@ -281,8 +281,11 @@ body {
 
 .card-card-prod {
   position: relative;
-  width: 160px;
+  width: 190px;
   aspect-ratio: 4/5;
+  @media (max-width: 670px) {
+    width: 180px;
+  }
 }
 
 .card-price-section-product {
