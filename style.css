@@ -1,8 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 * {
   padding: 0;
   margin: 0;
+}
+
+body {
+  background-color: #0f0f0f;
 }
 
 .protest-riot-regular {
@@ -13,7 +21,39 @@
 
 @font-face {
   font-family: "dotzero";
-  src: url("./DotZero.ttf");
+  src: url("../fonts/DotZero.ttf");
+}
+
+.hamburger-screen {
+  margin-top: 80px;
+  position: fixed;
+  width: 100%;
+  height: calc(100vh - 80px);
+  background-color: rgba(15, 15, 15, 0.9);
+
+  z-index: 1;
+  transform: rotate(90deg);
+  opacity: 0;
+  scale: 0.6;
+  transition: transform .3s linear, scale .3s linear,
+    opacity 0.7s linear;
+  transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1.0);
+  display: flex;
+  justify-content: center;
+  font-size: 35px;
+  line-height: 70px;
+  color: white;
+}
+
+.hamburger-screen>div {
+  margin-top: 60px;
+}
+
+.ham-screen-expand {
+  transform: rotate(0);
+  scale: 1;
+  opacity: 1;
+  /* transform: translatex(0); */
 }
 
 .header {
@@ -32,7 +72,7 @@
 .header-center,
 .header-right,
 .hamburger-menu-container {
-  padding: 0 23px 0 23px;
+  padding: 0 35px 0 35px;
   width: 33%;
   display: flex;
   color: #0f0f0f;
@@ -72,7 +112,14 @@
 }
 
 .hamburger-menu-container {
-  justify-content: right;
+
+  display: none;
+
+  @media (max-width: 600px) {
+    display: flex;
+    justify-content: end;
+
+  }
 }
 
 
@@ -93,12 +140,8 @@
   -o-transition: .5s ease-in-out;
   transition: .5s ease-in-out;
   cursor: pointer;
-  display: none;
 
-  @media (max-width: 600px) {
-    display: block;
 
-  }
 }
 
 .hamburger-menu span {
@@ -200,11 +243,20 @@
 }
 
 .home-overlay-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   font-family: "dotzero";
   letter-spacing: 3px;
-  line-height: 35px;
-  font-size: 24px;
+  line-height: 55px;
+  font-size: 40px;
   color: #f0f0f0;
+
+  @media (max-width: 500px) {
+    line-height: 50px;
+    font-size: 32px;
+
+  }
 }
 
 
@@ -214,4 +266,143 @@
   object-position: center top;
   width: 100%;
   height: 100%;
+}
+
+.our-products-container {
+  width: 100%;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  color: #f0f0f0;
+
+}
+
+
+.card-card-prod {
+  position: relative;
+  width: 160px;
+  aspect-ratio: 4/5;
+}
+
+.card-price-section-product {
+  font-size: 13.5px;
+  color: #fdfaf4;
+  background-color: #554348;
+}
+
+.prod-img {
+  overflow: hidden;
+  object-fit: cover;
+  image-rendering: optimizeSpeed;
+  width: 100%;
+  height: 70%;
+}
+
+.protest-riot-regular {
+  font-family: "Protest Riot", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.ibm-plex-mono-regular {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.card-price-section-product {
+  font-size: 13.5px;
+  color: #fdfaf4;
+  background-color: #554348;
+}
+
+.button-item-product {
+  transition: background-color 0.15s ease-in-out;
+  background-color: #996701;
+  color: rgb(253, 249, 242);
+
+  &:hover {
+    color: rgba(0, 0, 0, 0.7);
+    background-color: #ffd369;
+  }
+}
+
+.products-section {
+  background-color: #0f0f0f;
+}
+
+
+#products-grid {
+  padding-left: 1.5vmax;
+  padding-right: 1.5vmax;
+}
+
+@media (min-width: 1020px) {
+  #products-grid {
+    padding-left: 10vmax;
+    padding-right: 10vmax;
+  }
+
+}
+
+.footer-name {
+  margin-left: 20px;
+  font-size: 20px;
+  padding: 7px;
+  cursor: pointer;
+  background-color: transparent;
+  border: 3px solid #ff5e14;
+  color: #ff5e14;
+  transition: .3s;
+}
+
+.footer-name:hover {
+  scale: 1.2;
+  animation: pulse-footer 1s infinite;
+}
+
+@keyframes pulse-footer {
+  0% {
+    transform: scale(1);
+  }
+
+  70% {
+    transform: scale(.9);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.footer-content-about {
+  padding-left: 64px;
+
+}
+
+
+
+.center-footer-content {
+  padding-left: 64px;
+  color: #878787;
+}
+
+.footer-attr-bg-color {
+  height: 100px;
+  background-color: #1f1f1f;
+
+}
+.footer-container{
+ background-color: black;
+
+}
+@media (max-width: 900px) {
+  .center-footer-content {
+
+    justify-content: center;
+    padding-left: 0;
+
+  }
+
 }

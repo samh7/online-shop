@@ -5,13 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./out.css">
+    <script defer src="./script.js"></script>
+
 </head>
 
 <body>
-    <!-- <div class="hamburger-screen">
-        
-    </div> -->
+    <!-- hamburber screen -->
+    <div id="hamburger-screen" class="hamburger-screen protest-riot-regular">
+        <div class="ham-topbar-items">
+            <div>
+                <div>Products</div>
+                <div>Categories</div>
+                <div>Cart</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- header -->
     <header class="header protest-riot-regular">
         <div class="header-left">Home</div>
         <div class="header-center">
@@ -19,7 +30,6 @@
             <div>Categories</div>
         </div>
         <div class="header-right">
-            <div>Search</div>
             <div>Cart</div>
         </div>
         <div class="hamburger-menu-container">
@@ -30,6 +40,8 @@
             </div>
         </div>
     </header>
+
+    <!-- home-picture and text -->
     <div class="home-container">
         <div class="home-conatainer-overlay">
             <div class="home-overlay-center">
@@ -41,17 +53,30 @@
                 </div>
             </div>
         </div>
-        <img src="./freestocks-_3Q3tsJ01nc-unsplash.jpg" alt="" class="home-img">
-    </div>
-    <div style="height: 100vh;">
+        <img src="./images/freestocks-_3Q3tsJ01nc-unsplash.jpg" alt="" class="home-img">
     </div>
 
-    <script>
-        const element = document.getElementById("hammenu")
-        element.addEventListener("click", function () {
-            element.classList.toggle("open")
-        })
-    </script>
+    <!-- our products text -->
+    <div class="our-products-container protest-riot-regular">
+        <div>Our Products</div>
+    </div>
+
+
+    <!-- products +  js code -->
+
+    <div class="w-full overflow-hidden mx-auto mt-2 products-section">
+        <div id="products-grid"
+            class="grid grid-cols-2 gap-0 mdsm:grid-cols-3   lmd:grid-cols-4 px-xlmd  md:grid-cols-3 w-full">
+
+        </div>
+    </div>
+
+    <!-- footer + js-->
+
+    <footer id="footer" class="bottom-0 w-full mt-10 footer-content-color">
+
+    </footer>
+
 </body>
 
 </html>
