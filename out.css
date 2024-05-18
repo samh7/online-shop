@@ -1008,9 +1008,11 @@ body {
   transition: background-color 0.15s ease-in-out;
   background-color: #996701;
   color: rgb(253, 249, 242);
-  &:hover {
-    color: rgba(0, 0, 0, 0.7);
-    background-color: #ffd369;
+  @media (min-width: 600px) {
+    &:hover {
+      color: rgba(0, 0, 0, 0.7);
+      background-color: #ffd369;
+    }
   }
 }
 
@@ -1042,8 +1044,11 @@ body {
 }
 
 .footer-name:hover {
-  scale: 1.2;
-  animation: pulse-footer 1s infinite;
+  @media (min-width: 600px) {
+    scale: 1.2;
+
+    animation: pulse-footer 1s infinite;
+  }
 }
 
 @keyframes pulse-footer {
@@ -1074,7 +1079,7 @@ body {
   background-color: #1f1f1f;
 }
 
-.footer-container{
+.footer-container {
   background-color: black;
 }
 

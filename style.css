@@ -283,6 +283,7 @@ body {
   position: relative;
   width: 190px;
   aspect-ratio: 4/5;
+
   @media (max-width: 670px) {
     width: 170px;
   }
@@ -325,9 +326,12 @@ body {
   background-color: #996701;
   color: rgb(253, 249, 242);
 
-  &:hover {
-    color: rgba(0, 0, 0, 0.7);
-    background-color: #ffd369;
+  @media (min-width: 600px) {
+
+    &:hover {
+      color: rgba(0, 0, 0, 0.7);
+      background-color: #ffd369;
+    }
   }
 }
 
@@ -361,8 +365,11 @@ body {
 }
 
 .footer-name:hover {
-  scale: 1.2;
-  animation: pulse-footer 1s infinite;
+  @media (min-width: 600px) {
+
+    scale: 1.2;
+    animation: pulse-footer 1s infinite;
+  }
 }
 
 @keyframes pulse-footer {
@@ -396,10 +403,12 @@ body {
   background-color: #1f1f1f;
 
 }
-.footer-container{
- background-color: black;
+
+.footer-container {
+  background-color: black;
 
 }
+
 @media (max-width: 900px) {
   .center-footer-content {
 
