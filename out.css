@@ -635,6 +635,10 @@ video {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.resize{
+  resize: both;
+}
+
 .grid-cols-2{
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
@@ -761,23 +765,26 @@ body {
 }
 
 .hamburger-screen {
-  margin-top: 80px;
+  /* margin-top: 80px; */
   position: fixed;
   width: 100%;
-  height: calc(100vh - 80px);
+  height: calc(100vh);
   background-color: rgba(15, 15, 15, 0.9);
   z-index: 1;
-  transform: rotate(90deg);
+  /* transform: rotate(90deg); */
   opacity: 0;
-  scale: 0.6;
-  transition: transform .3s linear, scale .3s linear,
-    opacity 0.7s linear;
+  transition: opacity 0.7s linear;
   transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1.0);
   display: flex;
   justify-content: center;
   font-size: 35px;
   line-height: 70px;
+  padding-top: 50px;
   color: white;
+}
+
+.transparent{
+  background-color: transparent;
 }
 
 .hamburger-screen>div {
@@ -785,8 +792,7 @@ body {
 }
 
 .ham-screen-expand {
-  transform: rotate(0);
-  scale: 1;
+  /* transform: rotate(0); */
   opacity: 1;
   /* transform: translatex(0); */
 }
@@ -801,7 +807,7 @@ body {
   align-items: center;
   justify-content: center;
   z-index: 10000;
-  transition: transform .15s linear, scale .3s linear;
+  transition: transform .15s linear;
 }
 
 .header-left,

@@ -1,4 +1,4 @@
-const element = document.getElementById("hammenu")
+const hemMenu = document.getElementById("hammenu")
 const hamScreen = document.getElementById("hamburger-screen")
 const productsGrid = document.getElementById("products-grid")
 const products = [
@@ -162,9 +162,10 @@ for (let i = 0; i < products.length; i++) {
 `;
     productsGrid.append(productItem)
 }
-element.addEventListener("click", function () {
-    element.classList.toggle("open");
+hemMenu.addEventListener("click", function () {
+    hemMenu.classList.toggle("open");
     hamScreen.classList.toggle("ham-screen-expand");
+    header.classList.toggle("transparent")
 })
 
 
@@ -203,3 +204,20 @@ footerContent.innerHTML = `
 footerElement.append(footerContent)
 
 
+
+
+const productsButtonClicked = () => {
+    window.location.href = "#products";
+    hemMenu.classList.remove("open");
+    hamScreen.classList.remove("ham-screen-expand")
+}
+
+window.addEventListener("resize", function (e) {
+    const height = window.innerHeight;
+    const width = window.innerWidth;
+    if (width > 500) {
+        hemMenu.classList.remove("open")
+        hamScreen.classList.remove("ham-screen-expand")
+
+    }
+})

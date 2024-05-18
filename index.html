@@ -15,18 +15,19 @@
     <div id="hamburger-screen" class="hamburger-screen protest-riot-regular">
         <div class="ham-topbar-items">
             <div>
-                <div>Products</div>
+                <div onclick="productsButtonClicked()">Products</div>
                 <div>Categories</div>
                 <div>Cart</div>
             </div>
         </div>
     </div>
-
     <!-- header -->
     <header id="header" class="header protest-riot-regular">
         <div class="header-left">Home</div>
         <div class="header-center">
-            <div>Products</div>
+            <div>
+                <a href="#products">Products</a>
+            </div>
             <div>Categories</div>
         </div>
         <div class="header-right">
@@ -34,15 +35,15 @@
         </div>
         <div class="hamburger-menu-container">
             <div id="hammenu" class="hamburger-menu">
-                <span></span>
-                <span></span>
-                <span></span>
+                <span id="hamSpan1"></span>
+                <span id="hamSpan2"></span>
+                <span id="hamSpan3"></span>
             </div>
         </div>
     </header>
 
     <!-- home-picture and text -->
-    <div class="home-container">
+    <div id="products-section" class="home-container">
         <div class="home-conatainer-overlay">
             <div class="home-overlay-center">
                 <div class="home-overlay-text">
@@ -56,15 +57,15 @@
         <img src="./images/freestocks-_3Q3tsJ01nc-unsplash.jpg" alt="" class="home-img">
     </div>
 
-    <!-- our products text -->
-    <div class="our-products-container protest-riot-regular">
-        <div>Our Products</div>
-    </div>
+
 
 
     <!-- products +  js code -->
 
-    <div class="w-full overflow-hidden mx-auto mt-2 products-section">
+    <div id="products" class="w-full overflow-hidden mx-auto mt-2 products-section">
+        <div class="our-products-container protest-riot-regular">
+            <div>Our Products</div>
+        </div>
         <div id="products-grid"
             class="grid grid-cols-2 gap-0 mdsm:grid-cols-3   lmd:grid-cols-4 px-xlmd  md:grid-cols-3 w-full">
 
