@@ -1,6 +1,11 @@
 const hemMenu = document.getElementById("hammenu")
 const hamScreen = document.getElementById("hamburger-screen")
 const productsGrid = document.getElementById("products-grid")
+const CategoriesExpnanded = document.getElementById("categories-expanded")
+const cartOvverlay = document.getElementById("hamburger-screen-2")
+CategoriesExpnanded.classList.add("categories-hidden")
+
+cartOvverlay.classList.add("categories-hidden")
 const products = [
     {
         "id": "9382fc54-6e45-4668-aab2-e2a52c5a9bbb",
@@ -126,11 +131,14 @@ const products = [
 const header = document.getElementById('header');
 
 let lastScrolltop = 0;
-
+window.addEventListener("", function () {
+    CategoriesExpnanded.classList.add("categories-hidden")
+})
 window.addEventListener('scroll', function () {
     let scrollTop = this.document.documentElement.scrollTop;
     if (scrollTop >= lastScrolltop) {
         header.style.transform = 'translateY(-100%)';
+        CategoriesExpnanded.classList.add("categories-hidden")
 
     } else if (scrollTop < lastScrolltop) {
         header.style.transform = 'translateY(0)';
@@ -221,3 +229,14 @@ window.addEventListener("resize", function (e) {
 
     }
 })
+
+
+const expandCategories = () => {
+    CategoriesExpnanded.classList.toggle("categories-hidden")
+}
+
+// categories-hidden
+
+const openCart = () => {
+    cartOvverlay.classList.toggle("categories-hidden")
+}
