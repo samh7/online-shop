@@ -6,12 +6,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./out.css">
+
     <script defer src="./script.js"></script>
 
 </head>
 
 <body>
     <!-- hamburber screen -->
+    <div id="hamburger-screen-2" class="hamburger-screen-2 protest-riot-regular">
+        <div class="">
+            <div>
+
+                <div class="cart-item">
+                    <div class="center-item">
+                        <img src="./images/blue_dress.jpg" alt="">
+                        <div class="cart-description">
+                            <span>Ksh. 2000</span>
+                            <span>Size. 8</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cart-item">
+                    <div class="center-item">
+                        <img src="./images/blue_dress.jpg" alt="">
+                        <div class="cart-description">
+                            <span>Ksh. 2000</span>
+                            <span>Size. 8</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="cart-item">
+                    <div class="center-item">
+                        <img src="./images/blue_dress.jpg" alt="">
+                        <div class="cart-description">
+                            <span>Ksh. 2000</span>
+                            <span>Size. 8</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="cart-item">
+                    <div class="center-item">
+                        <img src="./images/blue_dress.jpg" alt="">
+                        <div class="cart-description">
+                            <span>Ksh. 2000</span>
+                            <span>Size. 8</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="cart-item">
+                    <div class="cart-chekout">
+                        <div>Total: Ksh. 8000</div>
+                        <div class="checkout-buttton">Checkout</div>
+                        <!-- <img src="./images/blue_dress.jpg" alt="">
+                        <div class="cart-description">
+                            <span>Ksh. 2000</span>
+                            <span>Size. 8</span>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div id="hamburger-screen" class="hamburger-screen protest-riot-regular">
         <div class="ham-topbar-items">
             <div>
@@ -23,15 +79,22 @@
     </div>
     <!-- header -->
     <header id="header" class="header protest-riot-regular">
-        <div class="header-left">Home</div>
+        <div class="header-left">HOME</div>
         <div class="header-center">
             <div>
                 <a href="#products">Products</a>
             </div>
-            <div>Categories</div>
+            <div onclick="expandCategories()" class="categories-lg">Categories
+                <div id="categories-expanded" class="categories-center">
+                    <span>Dresses</span>
+                    <span>Blouses</span>
+                    <span>Skirts</span>
+                    <span></span>
+                </div>
+            </div>
         </div>
         <div class="header-right">
-            <div>Cart</div>
+            <div onclick="openCart()">Cart</div>
         </div>
         <div class="hamburger-menu-container">
             <div id="hammenu" class="hamburger-menu">
@@ -42,6 +105,9 @@
         </div>
     </header>
 
+    <!-- <div class="cart-menu-overlay">
+        <div class="cart-menu"></div>
+    </div> -->
     <!-- home-picture and text -->
     <div id="products-section" class="home-container">
         <div class="home-conatainer-overlay">
