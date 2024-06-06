@@ -13,6 +13,7 @@ html{
 }
 body {
   background-color: #0f0f0f;
+  overflow-x: hidden;
 }
 
 .protest-riot-regular {
@@ -286,11 +287,12 @@ body {
 
 .card-card-prod {
   position: relative;
-  width: 190px;
+  width: 220px;
   aspect-ratio: 4/5;
 
-  @media (max-width: 670px) {
-    width: 170px;
+
+  @media (max-width: 500px) {
+    width: 230px;
   }
 }
 
@@ -540,4 +542,106 @@ body {
 .categories-hidden {
   transform: translateY(-100%);
   opacity: 0;
+}
+
+.opacity-0{
+  opacity: 0;
+}
+
+
+
+
+.categories-ham-screen{
+  width: 200px;
+  height: 200px;
+  border: 2px solid #f5deb3;
+  background-color: #1c1c1b;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: opacity 2s linear, heighr 0.4s 2s;  
+}
+
+
+
+
+.toggle-categories-ham-screen{
+  height: 0;
+  opacity: 0;
+}
+
+.categories-hamScreen{
+  width: 200px;
+  height: 60px;
+  margin-left: -25px;
+}
+
+#products-grid{
+
+  @media (min-width: 500px) {
+    /* grid-cols-2 gap-0 mdsm:grid-cols-2   lmd:grid-cols-4 px-xlmd  md:grid-cols-2  */
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (min-width: 800px) {
+    /* grid-cols-2 gap-0 mdsm:grid-cols-2   lmd:grid-cols-4 px-xlmd  md:grid-cols-2  */
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (min-width: 1200px) {
+    /* grid-cols-2 gap-0 mdsm:grid-cols-2   lmd:grid-cols-4 px-xlmd  md:grid-cols-2  */
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.size-prod{
+}
+
+.center-item-selected-item > img{
+  width: 200px;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+.center-item-descp{
+  max-width: 400px;
+  margin-left: 0px;
+  text-align: center;
+}
+
+.checkout-buttton-CENTER{
+  background-color: rebeccapurple;
+  font-size: 20px;
+
+  background-color: rebeccapurple;
+  width: 100px;
+  height: 50px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 80px;
+
+
+}
+
+.cart-item-2{
+  height: max-content;
+  flex-direction: column;
+  }
+#selected-prod{
+  transform: translateX(100%);
+}
+
+.close-button-selected-itrm{
+  width: 50px;
+  background-color: red;
+  margin-bottom: 40px;
+  border-radius: 100%;
+}
+
+.hide-selected-prod{
+
+  transform: translateX(-10%);
+  
 }

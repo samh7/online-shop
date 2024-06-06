@@ -151,7 +151,7 @@ for (let i = 0; i < products.length; i++) {
   const productItem = document.createElement("DIV");
   productItem.innerHTML = `
 
-<div id="product-item" class="card-card-prod mx-auto mt-10">
+<div  id="product-item" class="card-card-prod mx-auto mt-10">
         <img class="prod-img shadow-lg rounded-t-sm" src="${products[i].img_url}" alt="" />
         <div class="flex w-full justify-center px-2 py-2 card-price-section-product">
             <span class="ibm-plex-mono-regular w-10 max-w-20 min-w-20">
@@ -159,7 +159,7 @@ for (let i = 0; i < products.length; i++) {
             </span>
         </div>
         <div class="flex h-14 max-h-14 overflow-hidden w-full bg-green-200 justify-between">
-            <button class="w-full h-full text-2xl button-item-product protest-riot-regular">
+            <button  class="w-full h-full text-2xl button-item-product protest-riot-regular">
                 Buy
             </button>
         </div>
@@ -214,4 +214,19 @@ const expandCategories = () => {
 
 const openCart = () => {
   cartOvverlay.classList.toggle("categories-hidden");
+
 };
+
+const closeCart = () => {
+  cartOvverlay.classList.add("categories-hidden");
+};
+
+const categoriesHamScreen = document.getElementById("categories-ham-screen")
+const toggleCloseMenu = () =>{
+  categoriesHamScreen.classList.remove("toggle-categories-ham-screen")
+}
+
+
+const closeSelecteItemOverlay = () =>{
+document.getElementById("selected-prod").classList.toggle("hide-selected-prod")
+}

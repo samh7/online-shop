@@ -1,108 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./out.css">
-    <link rel="stylesheet" href="./footer.css">
+    <link rel="stylesheet" href="./out.css" />
+    <link rel="stylesheet" href="./footer.css" />
     <script defer src="./script.js"></script>
+  </head>
 
-</head>
+  <body>
+    <div id="selected-prod" class="hamburger-screen-2 protest-riot-regular">
+      <div class="">
+        <div>
 
-<body>
+          <div class="cart-item cart-item-2">
+            <div onclick="closeSelecteItemOverlay()" class="checkout-buttton-CENTER close-button-selected-itrm">X</div>
+
+            <div class="center-item center-item-selected-item">
+              <img src="./images/blue_dress.jpg" alt="" />
+            </div>
+            <div class="center-item-descp">
+              <div class="price">Ksh. 2000</div>
+              <div class="size">Size 8</div>
+              Lorem ipsum dolor sit, amet consectetur adis.
+            </div>
+            <div class="checkout-buttton-CENTER">Checkout</div>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- hamburber screen -->
-    <div id="hamburger-screen-2" class="hamburger-screen-2 protest-riot-regular">
-        <div class="">
-            <div>
+    <div
+      id="hamburger-screen-2"
+      class="hamburger-screen-2 protest-riot-regular"
+    >
+      <div class="">
+        <div>
+          <div class="cart-item">
+            <div class="center-item">
+              <img src="./images/blue_dress.jpg" alt="" />
+              <div class="cart-description">
+                <span>Ksh. 2000</span>
+                <span>Size. 8</span>
+              </div>
+            </div>
+          </div>
 
-                <div class="cart-item">
-                    <div class="center-item">
-                        <img src="./images/blue_dress.jpg" alt="">
-                        <div class="cart-description">
-                            <span>Ksh. 2000</span>
-                            <span>Size. 8</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="cart-item">
-                    <div class="center-item">
-                        <img src="./images/blue_dress.jpg" alt="">
-                        <div class="cart-description">
-                            <span>Ksh. 2000</span>
-                            <span>Size. 8</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="cart-item">
-                    <div class="center-item">
-                        <img src="./images/blue_dress.jpg" alt="">
-                        <div class="cart-description">
-                            <span>Ksh. 2000</span>
-                            <span>Size. 8</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="cart-item">
-                    <div class="center-item">
-                        <img src="./images/blue_dress.jpg" alt="">
-                        <div class="cart-description">
-                            <span>Ksh. 2000</span>
-                            <span>Size. 8</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="cart-item">
-                    <div class="cart-chekout">
-                        <div>Total: Ksh. 8000</div>
-                        <div class="checkout-buttton">Checkout</div>
-                        <!-- <img src="./images/blue_dress.jpg" alt="">
+          <div class="cart-item">
+            <div class="center-item">
+              <img src="./images/blue_dress.jpg" alt="" />
+              <div class="cart-description">
+                <span>Ksh. 2000</span>
+                <span>Size. 8</span>
+              </div>
+            </div>
+          </div>
+          <div class="cart-item">
+            <div class="center-item">
+              <img src="./images/blue_dress.jpg" alt="" />
+              <div class="cart-description">
+                <span>Ksh. 2000</span>
+                <span>Size. 8</span>
+              </div>
+            </div>
+          </div>
+          <div class="cart-item">
+            <div class="center-item">
+              <img src="./images/blue_dress.jpg" alt="" />
+              <div class="cart-description">
+                <span>Ksh. 2000</span>
+                <span>Size. 8</span>
+              </div>
+            </div>
+          </div>
+          <div class="cart-item">
+            <div class="cart-chekout">
+              <div>Total: Ksh. 8000</div>
+              <div class="checkout-buttton">Checkout</div>
+              <!-- <img src="./images/blue_dress.jpg" alt="">
                         <div class="cart-description">
                             <span>Ksh. 2000</span>
                             <span>Size. 8</span>
                         </div> -->
-                    </div>
-                </div>
             </div>
+          </div>
         </div>
+      </div>
     </div>
     <div id="hamburger-screen" class="hamburger-screen protest-riot-regular">
-        <div class="ham-topbar-items">
-            <div>
-                <div onclick="productsButtonClicked()">Products</div>
-                <div>Categories</div>
-                <div>Cart</div>
+      <div class="ham-topbar-items">
+        <div>
+          <div onclick="productsButtonClicked()">Products</div>
+          <div>
+            <button class="categories-hamScreen">Categories</button>
+            <div id="categories-ham-screen " class="categories-ham-screen">
+              <span>Dresses</span>
+              <span>Blouses</span>
+              <span>Skirts</span>
             </div>
+          </div>
+          <div onclick="openCart()">Cart</div>
         </div>
+      </div>
     </div>
     <!-- header -->
     <header id="header" class="header protest-riot-regular">
-        <div class="header-left">HOME</div>
-        <div class="header-center">
-            <div>
-                <a href="#products">Products</a>
-            </div>
-            <div onclick="expandCategories()" class="categories-lg">Categories
-                <div id="categories-expanded" class="categories-center">
-                    <span>Dresses</span>
-                    <span>Blouses</span>
-                    <span>Skirts</span>
-                    <span></span>
-                </div>
-            </div>
+      <div class="header-left">HOME</div>
+      <div class="header-center">
+        <div>
+          <a href="#products">Products</a>
         </div>
-        <div class="header-right">
-            <div onclick="openCart()">Cart</div>
+        <div onclick="expandCategories()" class="categories-lg">
+          Categories
+          <div id="categories-expanded" class="categories-center">
+            <span>Dresses</span>
+            <span>Blouses</span>
+            <span>Skirts</span>
+            <span></span>
+          </div>
         </div>
-        <div class="hamburger-menu-container">
-            <div id="hammenu" class="hamburger-menu">
-                <span id="hamSpan1"></span>
-                <span id="hamSpan2"></span>
-                <span id="hamSpan3"></span>
-            </div>
+      </div>
+      <div class="header-right">
+        <div onclick="openCart()">Cart</div>
+      </div>
+      <div onclick="closeCart()" class="hamburger-menu-container">
+        <div id="hammenu" class="hamburger-menu">
+          <span id="hamSpan1"></span>
+          <span id="hamSpan2"></span>
+          <span id="hamSpan3"></span>
         </div>
+      </div>
     </header>
 
     <!-- <div class="cart-menu-overlay">
@@ -110,40 +138,41 @@
     </div> -->
     <!-- home-picture and text -->
     <div id="products-section" class="home-container">
-        <div class="home-conatainer-overlay">
-            <div class="home-overlay-center">
-                <div class="home-overlay-text">
-                    <div>Quality,</div>
-                    <div>Comfortable,</div>
-                    <div>Healthy,</div>
-                    <div>Living.</div>
-                </div>
-            </div>
+      <div class="home-conatainer-overlay">
+        <div class="home-overlay-center">
+          <div class="home-overlay-text">
+            <div>Quality,</div>
+            <div>Comfortable,</div>
+            <div>Healthy,</div>
+            <div>Living.</div>
+          </div>
         </div>
-        <img src="./images/freestocks-_3Q3tsJ01nc-unsplash.jpg" alt="" class="home-img">
+      </div>
+      <img
+        src="./images/freestocks-_3Q3tsJ01nc-unsplash.jpg"
+        alt=""
+        class="home-img"
+      />
     </div>
-
-
-
 
     <!-- products +  js code -->
 
-    <div id="products" class="w-full overflow-hidden mx-auto mt-2 products-section">
-        <div class="our-products-container protest-riot-regular">
-            <div>Our Products</div>
-        </div>
-        <div id="products-grid"
-            class="grid grid-cols-2 gap-0 mdsm:grid-cols-3   lmd:grid-cols-4 px-xlmd  md:grid-cols-3 w-full">
-
-        </div>
+    <div
+    onclick="closeSelecteItemOverlay()"
+      id="products"
+      class="w-full overflow-hidden mx-auto mt-2 products-section"
+    >
+      <div class="our-products-container protest-riot-regular">
+        <div>Our Products</div>
+      </div>
+      <div id="products-grid" class="grid w-full"></div>
     </div>
 
     <!-- footer + js-->
 
-    <footer id="footer" class="bottom-0 w-full mt-10 footer-content-color">
-
-    </footer>
-
-</body>
-
+    <footer
+      id="footer"
+      class="bottom-0 w-full mt-10 footer-content-color"
+    ></footer>
+  </body>
 </html>

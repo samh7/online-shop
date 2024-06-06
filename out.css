@@ -567,20 +567,12 @@ video {
   margin-right: auto;
 }
 
-.mt-1{
-  margin-top: 0.25rem;
-}
-
 .mt-10{
   margin-top: 2.5rem;
 }
 
 .mt-2{
   margin-top: 0.5rem;
-}
-
-.inline{
-  display: inline;
 }
 
 .flex{
@@ -591,16 +583,8 @@ video {
   display: grid;
 }
 
-.h-10{
-  height: 2.5rem;
-}
-
 .h-14{
   height: 3.5rem;
-}
-
-.h-60{
-  height: 15rem;
 }
 
 .h-full{
@@ -613,10 +597,6 @@ video {
 
 .w-10{
   width: 2.5rem;
-}
-
-.w-52{
-  width: 13rem;
 }
 
 .w-full{
@@ -639,20 +619,8 @@ video {
   resize: both;
 }
 
-.grid-cols-2{
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
-.flex-col{
-  flex-direction: column;
-}
-
 .items-center{
   align-items: center;
-}
-
-.justify-start{
-  justify-content: flex-start;
 }
 
 .justify-center{
@@ -661,22 +629,6 @@ video {
 
 .justify-between{
   justify-content: space-between;
-}
-
-.gap-0{
-  gap: 0px;
-}
-
-.space-x-1 > :not([hidden]) ~ :not([hidden]){
-  --tw-space-x-reverse: 0;
-  margin-right: calc(0.25rem * var(--tw-space-x-reverse));
-  margin-left: calc(0.25rem * calc(1 - var(--tw-space-x-reverse)));
-}
-
-.space-x-5 > :not([hidden]) ~ :not([hidden]){
-  --tw-space-x-reverse: 0;
-  margin-right: calc(1.25rem * var(--tw-space-x-reverse));
-  margin-left: calc(1.25rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
 .overflow-hidden{
@@ -698,11 +650,6 @@ video {
   background-color: rgb(187 247 208 / var(--tw-bg-opacity));
 }
 
-.bg-white{
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
 .px-2{
   padding-left: 0.5rem;
   padding-right: 0.5rem;
@@ -713,10 +660,6 @@ video {
   padding-bottom: 0.5rem;
 }
 
-.pt-10{
-  padding-top: 2.5rem;
-}
-
 .text-2xl{
   font-size: 1.5rem;
   line-height: 2rem;
@@ -725,11 +668,6 @@ video {
 .text-sm{
   font-size: 0.875rem;
   line-height: 1.25rem;
-}
-
-.text-xl{
-  font-size: 1.25rem;
-  line-height: 1.75rem;
 }
 
 .text-white{
@@ -754,6 +692,7 @@ html{
 
 body {
   background-color: #0f0f0f;
+  overflow-x: hidden;
 }
 
 .protest-riot-regular {
@@ -979,10 +918,10 @@ body {
 
 .card-card-prod {
   position: relative;
-  width: 190px;
+  width: 220px;
   aspect-ratio: 4/5;
-  @media (max-width: 670px) {
-    width: 170px;
+  @media (max-width: 500px) {
+    width: 230px;
   }
 }
 
@@ -1204,14 +1143,96 @@ body {
   opacity: 0;
 }
 
-@media (min-width: 600px){
-  .mdsm\:grid-cols-3{
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+.opacity-0{
+  opacity: 0;
+}
+
+.categories-ham-screen{
+  width: 200px;
+  height: 200px;
+  border: 2px solid #f5deb3;
+  background-color: #1c1c1b;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: opacity 2s linear, heighr 0.4s 2s;
+}
+
+.toggle-categories-ham-screen{
+  height: 0;
+  opacity: 0;
+}
+
+.categories-hamScreen{
+  width: 200px;
+  height: 60px;
+  margin-left: -25px;
+}
+
+#products-grid{
+  @media (min-width: 500px) {
+    /* grid-cols-2 gap-0 mdsm:grid-cols-2   lmd:grid-cols-4 px-xlmd  md:grid-cols-2  */
+
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (min-width: 800px) {
+    /* grid-cols-2 gap-0 mdsm:grid-cols-2   lmd:grid-cols-4 px-xlmd  md:grid-cols-2  */
+
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @media (min-width: 1200px) {
+    /* grid-cols-2 gap-0 mdsm:grid-cols-2   lmd:grid-cols-4 px-xlmd  md:grid-cols-2  */
+
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
-@media (min-width: 830px){
-  .lmd\:grid-cols-4{
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
+.size-prod{
+}
+
+.center-item-selected-item > img{
+  width: 200px;
+  aspect-ratio: 1;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.center-item-descp{
+  max-width: 400px;
+  margin-left: 0px;
+  text-align: center;
+}
+
+.checkout-buttton-CENTER{
+  font-size: 20px;
+  background-color: rebeccapurple;
+  width: 100px;
+  height: 50px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 80px;
+}
+
+.cart-item-2{
+  height: -moz-max-content;
+  height: max-content;
+  flex-direction: column;
+}
+
+#selected-prod{
+  transform: translateX(100%);
+}
+
+.close-button-selected-itrm{
+  width: 50px;
+  background-color: red;
+  margin-bottom: 40px;
+  border-radius: 100%;
+}
+
+.hide-selected-prod{
+  transform: translateX(-10%);
 }
