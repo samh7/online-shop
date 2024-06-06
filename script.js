@@ -235,3 +235,9 @@ const closeSelecteItemOverlay = () => {
     .classList.toggle("selected-prod-close");
 };
 
+
+
+window.addEventListener("load", function(){
+  // .loader-index-hide
+  this.document.getElementById("loader-index").classList.add("loader-index-hide")
+})
