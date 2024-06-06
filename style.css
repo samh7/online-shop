@@ -267,11 +267,11 @@ body {
 
 .card-card-prod {
   position: relative;
-  width: 220px;
+  width: 210px;
   aspect-ratio: 4/5;
 
   @media (max-width: 500px) {
-    width: 230px;
+    width: 300px;
   }
 }
 
