@@ -159,7 +159,7 @@ for (let i = 0; i < products.length; i++) {
             </span>
         </div>
         <div class="flex h-14 max-h-14 overflow-hidden w-full bg-green-200 justify-between">
-            <button  class="w-full h-full text-2xl button-item-product protest-riot-regular">
+            <button onclick="closeSelecteItemOverlay()"  class="w-full h-full text-2xl button-item-product protest-riot-regular">
                 Buy
             </button>
         </div>
@@ -214,19 +214,24 @@ const expandCategories = () => {
 
 const openCart = () => {
   cartOvverlay.classList.toggle("categories-hidden");
-
 };
 
 const closeCart = () => {
   cartOvverlay.classList.add("categories-hidden");
 };
 
-const categoriesHamScreen = document.getElementById("categories-ham-screen")
-const toggleCloseMenu = () =>{
-  categoriesHamScreen.classList.remove("toggle-categories-ham-screen")
-}
+const categoriesHamScreen = document.getElementById("categories-ham-screen");
+const toggleCloseMenu = () => {
+  categoriesHamScreen.classList.remove("toggle-categories-ham-screen");
+};
+document
+.getElementById("selected-prod").style
+.transform =  "translateY(-40%);"
 
+const closeSelecteItemOverlay = () => {
+  console.log("hello ,weo");
+  document
+    .getElementById("selected-prod")
+    .classList.toggle("selected-prod-close");
+};
 
-const closeSelecteItemOverlay = () =>{
-document.getElementById("selected-prod").classList.toggle("hide-selected-prod")
-}
