@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="./out.css" />
     <link rel="stylesheet" href="./footer.css" />
     <script defer src="./script.js"></script>
+    <script defer src="./js/products.js"></script>
+    <script defer src="./js/footer.js"></script>
   </head>
 
   <body>
@@ -23,7 +25,6 @@
       </div>
     </div>
 
-    <img style="display: none;" src="https://ihatetomatoes.net/create-custom-preloading-screen/" alt="">
     <div
       id="selected-prod"
       class="hamburger-screen-2 protest-riot-regular selected-prod-close"
@@ -37,9 +38,8 @@
             >
               X
             </div>
-
             <div class="center-item center-item-selected-item">
-              <img src="./images/blue_dress.jpg" alt="" />
+              <img class="rounded-md" src="./images/blue_dress.jpg" alt="" />
             </div>
             <div class="center-item-descp">
               <div class="price">Ksh. 2000</div>
@@ -60,17 +60,7 @@
         <div>
           <div class="cart-item">
             <div class="center-item">
-              <img src="./images/blue_dress.jpg" alt="" />
-              <div class="cart-description">
-                <span>Ksh. 2000</span>
-                <span>Size. 8</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="cart-item">
-            <div class="center-item">
-              <img src="./images/blue_dress.jpg" alt="" />
+              <img class="rounded-md" src="./images/blue_dress.jpg" alt="" />
               <div class="cart-description">
                 <span>Ksh. 2000</span>
                 <span>Size. 8</span>
@@ -79,7 +69,7 @@
           </div>
           <div class="cart-item">
             <div class="center-item">
-              <img src="./images/blue_dress.jpg" alt="" />
+              <img class="rounded-md" src="./images/blue_dress.jpg" alt="" />
               <div class="cart-description">
                 <span>Ksh. 2000</span>
                 <span>Size. 8</span>
@@ -88,7 +78,16 @@
           </div>
           <div class="cart-item">
             <div class="center-item">
-              <img src="./images/blue_dress.jpg" alt="" />
+              <img class="rounded-md" src="./images/blue_dress.jpg" alt="" />
+              <div class="cart-description">
+                <span>Ksh. 2000</span>
+                <span>Size. 8</span>
+              </div>
+            </div>
+          </div>
+          <div class="cart-item">
+            <div class="center-item">
+              <img class="rounded-md" src="./images/blue_dress.jpg" alt="" />
               <div class="cart-description">
                 <span>Ksh. 2000</span>
                 <span>Size. 8</span>
@@ -99,11 +98,6 @@
             <div class="cart-chekout">
               <div>Total: Ksh. 8000</div>
               <div class="checkout-buttton">Checkout</div>
-              <!-- <img src="./images/blue_dress.jpg" alt="">
-                        <div class="cart-description">
-                            <span>Ksh. 2000</span>
-                            <span>Size. 8</span>
-                        </div> -->
             </div>
           </div>
         </div>
@@ -154,10 +148,6 @@
       </div>
     </header>
 
-    <!-- <div class="cart-menu-overlay">
-        <div class="cart-menu"></div>
-    </div> -->
-    <!-- home-picture and text -->
     <div id="products-section" class="home-container">
       <div class="home-conatainer-overlay">
         <div class="home-overlay-center">
@@ -176,7 +166,7 @@
       />
     </div>
 
-    <!-- products +  js code -->
+    <!-- products -->
 
     <div
       id="products"
@@ -188,7 +178,7 @@
       <div id="products-grid" class="grid w-full"></div>
     </div>
 
-    <!-- footer + js-->
+    <!-- footer -->
 
     <footer
       id="footer"

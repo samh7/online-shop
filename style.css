@@ -266,6 +266,8 @@ body {
 }
 
 .card-card-prod {
+  /* border-top-left-radius: 5px;
+  border-top-right-radius: 5px; */
   position: relative;
   width: 210px;
   aspect-ratio: 4/5;
@@ -282,6 +284,8 @@ body {
 }
 
 .prod-img {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
   overflow: hidden;
   object-fit: cover;
   image-rendering: optimizeSpeed;
@@ -308,6 +312,9 @@ body {
 }
 
 .button-item-product {
+  height: 40px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
   transition: background-color 0.15s ease-in-out;
   background-color: #996701;
   color: rgb(253, 249, 242);
@@ -595,7 +602,7 @@ body {
   place-items: center;
 }
 
-.loader-index-hide{
+.loader-index-hide {
   transform: translateX(-150%);
 }
 .lds-roller,
